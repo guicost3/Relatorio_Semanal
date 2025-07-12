@@ -1,5 +1,12 @@
-# Arquivo de credenciais - NUNCA versionar!
-credenciais.env
 
-# Arquivos de cache do Python
+credenciais.env
+.env
+.env.*
+
 __pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+venv/
+env/
