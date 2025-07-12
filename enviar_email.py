@@ -67,7 +67,7 @@ def enviar(
     server = None
     try:
         # Lógica de conexão dinâmica baseada na porta
-        if smtp_port == 465:  # Conexão SSL implícita (Gmail)
+        if smtp_port == 465:
             server = smtplib.SMTP_SSL(smtp_server, smtp_port)
         else:  # Conexão TLS explícita (Outlook, outros)
             server = smtplib.SMTP(smtp_server, smtp_port)
@@ -76,7 +76,6 @@ def enviar(
         server.login(smtp_user, smtp_password)
         server.send_message(msg)
 
-        print(f"E-mail enviado com sucesso para: {', '.join(destinatarios)}")
         return True
     except smtplib.SMTPAuthenticationError:
         print("Erro de autenticação. Verifique seu e-mail, senha de app e as configurações de segurança.")

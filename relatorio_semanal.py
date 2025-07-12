@@ -53,7 +53,6 @@ def encontrar_relatorios(pasta_relatorios:str)-> list[str]:
             data_modificacao = datetime.fromtimestamp(os.path.getmtime(caminho_arquivo))
             if data_modificacao >= uma_semana_atras:
                 arquivos_encontrados.append(caminho_arquivo)
-                print(f"- Encontrado: {caminho_arquivo}")
     return arquivos_encontrados
 
 #Função para enviar os relatórios
@@ -66,9 +65,6 @@ def enviar_relatorios():
     semana_ultimo_envio = -1
 
     print("Serviço de relatório semanal iniciado.")
-    print(f"Destinatário: {destinatario}")
-    print(f"Dia de envio: {dia_da_semana_envio}")
-    print(f"Pasta de relatorios: {pasta_relatorios}")
     print("Pressione Ctrl+C para sair.")
 
     while True:
