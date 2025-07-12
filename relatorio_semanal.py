@@ -16,14 +16,14 @@ dia_da_semana_envio = 6
 
 # Pasta onde os relatórios de estudo são salvos.
 
-pasta_relatorios = os.path.join(script_dir, 'Relatórios de Estudo')
+pasta_relatorios = os.path.join(script_dir, 'Relatórios')
 
-assunto_email = "Relatório Semanal de Estudo"
+assunto_email = "Relatório Semanal"
 
 corpo = """
 
     Bom dia!
-    Segue Relatório semanal de estudo em anexo.
+    Segue Relatório semanal em anexo.
     Este e-mail foi enviado automaticamente.
    
     Atenciosamente,
